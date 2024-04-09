@@ -43,13 +43,13 @@ This project aims to replicate the core functionalities of Cricbuzz, providing u
 
 ## Endpoints
 
-- POST `/api/admin/signup`: Register an admin user.
-- POST `/api/admin/login`: Login an admin user.
-- POST `/api/matches`: Create a new match.
-- GET `/api/matches`: Get all match schedules.
-- GET `/api/matches/{match_id}`: Get details of a specific match.
-- POST `/api/teams/{team_id}/squad`: Add a player to a team's squad.
-- GET `/api/players/{player_id}/stats`: Get player statistics.
+- POST `/aplication/register`: Register an admin user.
+- POST `/aplication/login`: Login an admin user.
+- POST `/aplication/creatematches`: Create a new match.
+- GET `/application/getmatcheschedule`: Get all match schedules.
+- GET `/aplication/getmatchedetails/{match_id}`: Get details of a specific match.
+- POST `/application/addteam/{team_id}/squad`: Add a player to a team's squad.
+- GET `/aplication/getplayerstatics/{player_id}/stats`: Get player statistics.
 
 ## Contributing
 
