@@ -49,7 +49,7 @@ This project aims to replicate the core functionalities of Cricbuzz, providing u
 - GET `/application/getmatcheschedule`: Get all match schedules.
 - GET `/aplication/getmatchedetails/{match_id}`: Get details of a specific match.
 - POST `/application/addteam/{team_id}/squad`: Add a player to a team's squad.
-- GET `/aplication/getplayerstatics/{player_id}/stats`: Get player statistics.
+- GET `/aplication/getplayerstatics/{player_id}`: Get player statistics.
 
 ## Contributing
 
