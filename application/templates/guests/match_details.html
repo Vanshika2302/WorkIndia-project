@@ -1,0 +1,30 @@
+{% extends 'guest_base.html' %}
+
+{% block content %}
+  <h1>Match Details</h1>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Match ID: {{ match.match_id }}</h5>
+      <p class="card-text">Team 1: {{ match.team_1 }}</p>
+      <p class="card-text">Team 2: {{ match.team_2 }}</p>
+      <p class="card-text">Date: {{ match.date }}</p>
+      <p class="card-text">Venue: {{ match.venue }}</p>
+      <p class="card-text">Status: {{ match.status }}</p>
+    </div>
+  </div>
+  <div class="mt-3">
+    <h3>Squads</h3>
+    <h5>Team 1</h5>
+    <ul>
+      {% for player in match.squads.team_1 %}
+        <li>{{ player.name }} ({{ player.player_id }})</li>
+      {% endfor %}
+    </ul>
+    <h5>Team 2</h5>
+    <ul>
+      {% for player in match.squads.team_2 %}
+        <li>{{ player.name }} ({{ player.player_id }})</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

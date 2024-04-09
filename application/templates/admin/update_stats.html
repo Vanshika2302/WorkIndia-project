@@ -1,0 +1,35 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h2 class="mb-4">Update Player Statistics</h2>
+    <form method="post">
+      {{ form.csrf_token }}
+      <div class="form-group">
+        <label for="player">Select Player:</label>
+        <select class="form-control" id="player" name="player">
+          {% for player in players %}
+          <option value="{{ player.id }}">{{ player.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="matches_played">Matches Played:</label>
+        <input type="number" class="form-control" id="matches_played" name="matches_played">
+      </div>
+      <div class="form-group">
+        <label for="runs">Runs Scored:</label>
+        <input type="number" class="form-control" id="runs" name="runs">
+      </div>
+      <div class="form-group">
+        <label for="average">Batting Average:</label>
+        <input type="number" class="form-control" id="average" name="average">
+      </div>
+      <button type="submit" class="btn btn-primary">Update Statistics</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
